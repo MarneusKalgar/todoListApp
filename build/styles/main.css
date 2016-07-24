@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ccc;
+	font: 1rem Roboto, sans-serif;
+}
+
+.main {
+	width: 60rem;
+	margin: 5em auto 0;
+	border-radius: 1.5rem;
+	background-color: #fff;
+}
+.main-title {
+	position: relative;
+	margin: 0;
+	height: 2.5em;
+	line-height: 2.5em;
+	background-color: #666;
+	font-size: 1.8em;
+	color: #e0dbdb;
+	text-align: center;
+	letter-spacing: .1em;
+	border-top-left-radius: 1.5rem;
+	border-top-right-radius: 1.5rem;
+}
+.main-title:before {
+	content: '';
+	position: absolute;
+	top: 28%;
+	left: 39%;
+	width: 1em;
+	height: 1em;
+	background-image: url('../img/interface.svg');
+}
+.add {
+	padding-bottom: 1em;
+}
+.list {
+	padding: 1em 2em;
+}
+.item {
+	margin-top: .5em;
+	height: 3em;
+	background-color: #fff;
+	border-bottom: 0.0625em solid rgba(102,102,102, .5);
+}
+.item:last-child {
+	border-bottom: none;
+}
+.actions {
+	float: right;
+}
+
+.editing-field {
+	margin: 0 1em 0 0;
+	padding-left: .5em;
+	height: 2em;
+	font: 1rem Roboto, sans-serif;
+}
+.editing-label {
+	display: inline-block;
+	margin: .5em 1em 0 0;
+	height: 2em;
+}
+.checkbox {
+	display: inline-block;
+	margin-top: .5em;
+}
+.completed .editing-label {
+	color: #b5c2ca;
+	text-decoration: line-through;
+}
+.edited:after {
+	content: "EDITED";
+	color: #666;
+}
+
+
+.btn {
+	margin-top: .5em;
+	height: 2em;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	border-radius: .5em;
+	transition: all 0.2s ease 0.1s;
+}
+.btn:active, .btn:focus {
+	outline: none;
+	box-shadow: inset .1em .1em 0 rgba(79,79,79,.5), inset -.1em -.1em 0 rgba(79,79,79,.5);
+}
+
+.btn-add {
+	padding: .5em;
+	font-size: 1.1em;
+	background-color: #23a5cf;
+}
+.btn-add:hover {
+	background-color: #30c9fb;
+}
+.btn-save {
+	background-color: #35c962;
+}
+.btn-save:hover {
+	background-color: #43fc7c;
+}
+.btn-delete {
+	background-color: #db3232;
+}
+.btn-delete:hover {
+	background-color: #fa3b3b;
+}

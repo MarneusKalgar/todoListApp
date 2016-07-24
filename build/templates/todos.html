@@ -1,0 +1,19 @@
+<div class="list">
+			
+	<div class="add">
+		<button type="button" ng-click="addTodo()" class="btn btn-add">+ Add a new todo</button>
+	</div>
+
+	<div ng-repeat="todo in todos | orderBy : 'completed'" ng-init="todo.completed = false; todo.edited = false"
+			 ng-class="{ 'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed }"
+			 class="item">
+		<input ng-model="todo.completed" type="checkbox" class="checkbox">
+		<label ng-hide="editing" ng-click="editing = !editing" class="editing-label">{{todo.name}}</label>
+		<input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" type="text" class="editing-field">
+
+		<div class="actions">
+			<button type="button" ng-click="saveTodo(todo)" class="btn btn-save">Save</button>
+			<button type="button" ng-click="deleteTodo(todo, $index)" class="btn btn-delete">Delete</button>
+		</div>
+	</div> <!-- end item -->
+</div><!-- end list -->
