@@ -1,6 +1,6 @@
 # todoListApp
 The todoListApp created with AngularJS
 
-Start
+Start:  
 * npm install
 * gulp
